@@ -24,6 +24,7 @@ static NSString *ID = @"cell";
 //    self.tableview.rowHeight = 70;
     self.tableview.dataSource = self;
     self.tableview.delegate = self;
+    self.tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
     [self.view addSubview:self.tableview];
     
