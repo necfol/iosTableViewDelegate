@@ -35,6 +35,9 @@ static NSString *ID = @"cell";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     cell.textLabel.text = [NSString stringWithFormat:@"测试-----%zd", indexPath.row];
+    UIView *selectedView = [[UIView alloc] init];
+    selectedView.backgroundColor = [UIColor redColor];
+    cell.selectedBackgroundView = selectedView;
     return cell;
     
 }
